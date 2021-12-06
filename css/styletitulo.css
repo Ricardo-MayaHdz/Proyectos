@@ -1,0 +1,784 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.body{
+background-image: url("../../imagenes/lolo.jpg");
+  width: 100%;
+  height: 100%;
+}
+/*------------------ MENU ------------------*/
+.menu ul {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position:fixed;
+    background:#FA8072;
+    left: 0;
+    width: 100%;
+    z-index:100;
+    border-bottom: solid #e7e7e7 1px;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+}
+li a:hover {
+    color: #yellow;
+}
+.menu{
+  font-family: 'Poiret One', cursive;
+  padding-left: 60px;
+  background-color:#FA8072;
+}
+.container {
+	text-shadow: 0px 0px 7px rgba(28, 28, 28, 0.75);
+	color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 2;
+  font-weight: 300;
+  font-family: 'Raleway', sans-serif;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.iniciar{
+  position: fixed;
+  top:5px;
+  right: 5px;
+  color: #777;
+  padding: 12px;
+  cursor: pointer;
+  z-index: 101;
+}
+.iniciar > a{
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-decoration: none;
+  color: #777;
+}
+.iniciar > a:hover{
+  color: #FF5733;
+}
+.cerrar{
+  position: fixed;
+  top:5px;
+  right: 5px;
+  color: #777;
+  padding: 12px;
+  cursor: pointer;
+  z-index: 101;
+}
+.cerrar > a{
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-decoration: none;
+  color: #777;
+}
+.cerrar:hover{
+  color: #FF5733;
+}
+/*---------- EFECTO DE BOTONES DEL MENU -------------------*/
+.hvr-underline-reveal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-reveal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #FA8072;
+  height: 4px;
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-reveal:hover:before, .hvr-underline-reveal:focus:before, .hvr-underline-reveal:active:before {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+/*------------------------ CUADRO DEL CUERPO ----------------*/
+.carrusel{
+	background="../imagenes/lolo.jpg";
+  width: 100%;
+  height: 250px;
+}
+/*.fondo_principal{
+  background: url(../imagenes/lolo.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}*/
+/*.imagen_fondo{
+  background: url(../imagenes/lolo.jpg) no-repeat   fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  text-align: center;
+}*/
+.contenedor_general{
+  width: 60%;
+  margin: auto;
+  padding-top: 10em;
+}
+.contenedor_productos2{
+  margin: auto;
+  text-align: left;
+  position: relative;
+  width: 99%;
+  right: 0;
+  height: auto;
+  padding: 0px;
+}
+.contenedor_productos2 > a{
+  font-family: 'Dosis', sans-serif;
+  background: #303233;
+  border-style: solid;
+  border-color: #00ff24;
+  border-width: 0px 0px 0px 3px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+1}
+/*----------------VISTA DE IMAGENES----------------*/
+.contenedor_vistas{
+  justify-content: center;
+  position: relative;
+  margin: auto;
+  margin-top: 0px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.vista{
+  font-family: 'Electrolize', sans-serif;
+  width: 350px;
+  height: 350px;
+  background: #e7e7e7;
+  justify-content: center;
+  text-align: left;
+  margin-right: 30px;
+  margin-top: 35px;
+  padding-bottom: 20px;
+}
+.sub-menu{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 98%;
+  height: 20px;
+}
+.animacion_imagen{
+border:none;
+padding:0px;
+margin:0px;
+width:330px;
+height:230px;
+}
+.animacion_imagen:hover{
+  cursor: pointer;
+  transition: all 2s;
+  transform: scale(1.03);
+  transition: all 2s;
+}
+.cuadrofondo{
+  margin: auto;
+  width: 98%;
+  top: -5px;
+  background="../imagenes/lolo.jpg";
+}
+/*----------- CARRUSEL --------------------------------*/
+.slider {
+	width: 100%;
+  height: 100%;
+	margin: auto;
+	overflow: hidden;
+}
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	animation: cambio 10s infinite alternate linear;
+}
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+.slider img {
+	width: 100%;
+  height: 97%;
+}
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+}
+/*---------------footer---------------------*/
+.pie_pagina{
+  background: #66c666;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  padding-top: 10px;
+}
+.c1{
+  color: #fff;
+}
+.c2{
+  color: #9fa3a6;
+}
+/*------------------ formulario de login -------------------*/
+.cuadro_formulario{
+  margin: auto;
+  position: relative;
+  width: 90%;
+  right: 0;
+  height: auto;
+  padding: 0px;
+}
+.formulario{
+  justify-content: center;
+  position: relative;
+  margin: auto;
+  margin-top: 0px;
+  padding:0px 0px 0px 0px;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.login{
+  padding: 0;
+  margin-left: 10px;
+  width: 450px;
+  height: auto;
+}
+.registro{
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+.form {
+  width: 380px;
+  height:350px;
+  margin: 0px auto;
+  background: #FFCC99;
+  padding:20px 27px;
+  text-align: center;
+}
+.form1 {
+  width: 480px;
+  height:350px;
+  margin: 0px auto;
+  background: #FFCC99;
+  padding:20px 27px;
+  text-align: center;
+}
+.group {
+  position: relative;
+  margin: 20px 0;
+}
+.group >input,textarea {
+  background: none;
+  color: #000000;
+  font-size: 18px;
+  padding: 0px 10px 10px 5px;
+  display: block;
+  width: 320px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #00ff24;
+}
+.group>input:focus,textarea:focus {
+  outline: none;
+}
+.group>input:focus ~ label, .group>input:valid ~ label,textarea:focus ~ label,
+textarea:valid ~ label {
+  top: -14px;
+  font-size: 12px;
+  color: #000000;
+}
+.group>input:focus ~ .bar:before,textarea:focus ~ .bar:before {
+  width: 320px;
+}
+/* titulo de la caja de texto*/
+label {
+  color: #000000;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 300ms ease all;
+}
+.bar {
+  position: relative;
+  display: block;
+  width: 320px;
+}
+.bar:before {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background-image: url("../imagenes/fondo22.jpg");
+  transition: 300ms ease all;
+  left: 0%;
+}
+.btn {
+  cursor:pointer;
+  background: #fff;
+  color: #959595;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.btn:hover {
+  color: #8b8b8b;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
+}
+.btn.btn-link {
+  background: #2196F3;
+  color: #d3eafd;
+}
+.btn.btn-link:hover {
+  background: #0d8aee;
+  color: #deeffd;
+}
+.btn.btn-submit {
+  background-image: url("../imagenes/lolo.jpg");
+  background-size: 100%;
+  color: #000;
+}
+.btn.btn-submit:hover {
+  transition: all 0.6s;
+  background-image: url("../imagenes/lolo.jpg");
+  background-size: 100%;
+  transform: rotate(-20deg);
+}
+.btn.btn-cancel {
+  background-image: url("../imagenes/lolo.jpg");
+  background-size: 100%;
+  color: #000;
+}
+.btn.btn-cancel:hover {
+  transition: all 0.6s;
+  background-image: url("../imagenes/lolo.jpg");
+  background-size: 100%;
+  transform: rotate(20deg);
+}
+.btn-box {
+  text-align: center;
+  margin: 50px 0;  
+}
+.oculto{
+  display: none;
+}
+.baja{
+  font-family: 'Poiret One', cursive;
+  padding: 10px;
+  background: #ddd;
+  color:#000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.baja:hover{
+  color: #00ff24;
+  cursor: pointer;
+  border-style: solid;
+  border-color: #00ff24;
+  border-width: 0px 0px 0px 3px;
+}
+/*----------PANEL PRINCIPAL-------------------------*/
+.contenedor_general1{
+  width: 100%;
+  margin: auto;
+  padding-top: 6em;
+}
+.contenedorprincipal{
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  right: 0;
+  height: auto;
+  background: #e7e7e7;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.vista1{
+  font-family: 'Electrolize', sans-serif;
+  width: 310px;
+  height: 350px;
+  justify-content: center;
+  text-align: left;
+  margin-right: 30px;
+  margin-top: 35px;
+  padding-bottom: 10px;
+}
+.vista2{
+  font-family: 'Electrolize', sans-serif;
+  width: 65%;
+  height: 350px;
+  background: blue;
+  justify-content: center;
+  text-align: left;      
+}
+.vista3{
+  font-family: 'Electrolize', sans-serif;  
+  width: 65%;
+  height: auto;
+  display: none;
+  background: ;
+  justify-content: center;
+  text-align: left;
+}
+.menu_lateral{
+    text-decoration: none;
+    margin: auto;
+    width: 90%;
+    height: auto;
+    border: solid 2px #FFCC99;
+}
+.menu_lateral .opciones{
+    text-decoration: none;
+    color: #black;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    background: #dede;
+    transition: all 1s;
+}
+.menu_lateral .opciones:hover{
+    color: #DFDFDF;
+    background-color: #FFCC99;
+    border: solid 1px #FFCC99;
+}
+.titu{
+    width: 90%;    
+    padding: 10px;
+    background: #fff;
+    cursor: pointer;
+    border: solid 2px #00ff24;    
+}
+.contenedor_formularios{
+    margin: auto;
+    background: #fff;
+    width: 650px;
+    height: auto;
+    padding: 10px;
+}
+.contenedor_formularios h2{
+    text-align: center;
+    padding-bottom: 30px;
+}
+.aviso{
+    margin: 10px auto;
+    color: #FFCC99;
+    text-align: center;
+    background:#ffddee;    
+}
+.caja_texto{
+		outline:none;
+		color:#000000;
+		padding:6px;
+		border: none;
+	    border-bottom: 0px solid #FFCC99;
+		margin-left:10px;
+		transition:all 0.6s;
+		font-family:Georgia, "Times New Roman", Times, serif;
+		font-size:16px;
+;
+}
+.caja_textor{
+		outline:none;
+		color:#FFCC99;
+		padding:6px;
+		border: none;
+	    border-bottom: 1px solid #FFCC99;
+		margin-left:10px;
+		transition:all 0.6s;
+		font-family:Georgia, "Times New Roman", Times, serif;
+		font-size:16px;
+}
+.h2t{
+		text-align:center;
+		color:#66c666;
+}
+.h2tr{
+		text-align:center;
+		color:#FF0000;
+}
+.boton-agregar{
+			cursor:pointer;
+			background: #4CAF50;
+			border:solid 1px  #009900;
+			color:#FFFFFF;
+			padding:8px 50px;
+			transition:all 0.6s;
+}
+.boton-agregar:hover{
+	background:#FFFFFF;
+	color:#4CAF50;
+}
+.boton-limpiar{
+			cursor:pointer;
+			background: #FF5B60;
+			border:solid 1px #f44336;
+			color:#FFFFFF;
+			padding:8px 17px;
+			transition:all 0.6s;
+}
+.boton-limpiar:hover{
+		background:#FFFFFF;
+		color:#f44336;
+}
+.linea{
+	width:80%;
+	background:#FA8072;
+	height:5px;
+}
+.linearoja{
+	width:80%;
+	background:#FF0000;
+	height:2px;
+}
+/*------------------------CONTENEDOR CATALOGO ---------------------------------*/
+.contenedor_catalogo{
+	border-radius:0px 40px 0px 40px;
+	display: flex;
+ 	flex-wrap: wrap;
+	width:99%;
+	background: url(../imagenes/lolo.jpeg) no-repeat center center fixed;
+	margin:auto;
+	padding-bottom:15px;
+    justify-content: center;	
+}
+.cuadro_imagen{
+border-radius:15px;
+margin-top:10px;
+margin-left:10px;
+width:330px;
+height:auto;
+padding:10px;
+background:#ffcc99;
+}
+.centrado_tabla{
+text-align:left;
+color:#000
+
+;
+margin:auto;
+width:330px;
+height:auto;
+padding:20px;
+}
+.titulo_catalogo{
+border-radius:0px 0px 20px 20px;
+padding:5px;
+padding-top:17px;
+background: url(../imagenes/lolo.jpeg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+color:#FA8072;
+width:80%;
+height:50px;
+text-align:center;
+}
+.fondocatalogo{
+  -webkit-background-size:#FFF;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* -----------------------------CARRITO---------------------------------------*/
+.contenedor_carrito{
+	padding:30px;
+	margin:auto;
+	width:80%;
+	height:37px;
+}
+.titulo_carrito{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:30px;
+}
+.linea_carrito{
+	width:100%;
+	background:#FA8072;
+	height:2px;
+}
+.titulo_tabla_carrito{
+font-family:Arial, Helvetica, sans-serif;
+font-size:14px;
+height:37px;
+}
+.tabla_carrito td{
+	transition: all .5s;
+}
+.tabla_carrito{
+	border-collapse: collapse;
+	font-size: 14px;
+	min-width: 537px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+tabla_carrito th,
+.tabla_carrito td {
+	border: 1px solid #CCCCCC;
+	padding: 7px;
+}
+.input_numbre{
+border:none;
+padding:5px 12px;
+color:#555;
+background-color:#FFFFFF;
+border:1px solid #ccc;
+font-size:14px;
+font-weight: normal;
+line-height: 1.42857143;
+text-align: center;
+ 
+white-space: nowrap;
+vertical-align: middle;
+border-radius:4px 0px 0px 4px;
+width:100px;
+}
+.input_aztualizar{
+display:inline-block;
+margin-left:-3px;
+padding:6px 12px;
+background:#46b8da;
+color:#FFFFFF;
+font-size:14px;
+font-weight: normal;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+border-radius:0px 4px 4px 0px;
+border: 1px solid transparent;
+width:100px;
+}
+
+/*------------------------ PAGINA TARJETA PAGO --------------------------------------------*/
+.cuadro_tarjeta{
+	font-family: 'Poiret One', bold;
+	margin:auto;
+	width:500px;
+	height:500px;
+	border:#00ff24 solid 1px;
+	border-radius:10px;
+	padding:10px;
+}
+.datos_tarjeta{
+	margin:auto;
+	width:350px;	
+}
+.name_tarjeta{
+	width:90%;
+	outline:none;
+	color:#00ff24;
+	padding:6px;
+	border: none;
+	border-bottom: 1px solid #00ff24;
+	margin-left:10px;
+	transition:all 0.6s;
+	font-family: 'Electrolize', sans-serif;  
+	font-size:16px;
+}
+.numero_tarjeta{
+	width:60px;
+	outline:none;
+	color:#00ff24;
+	padding:6px;
+	border: none;
+	border-bottom: 1px solid #00ff24;
+	margin-left:1px;
+	transition:all 0.6s;
+	font-family: 'Electrolize', sans-serif;  
+	font-size:16px;
+}
+.lista{
+	outline:none;
+	border: none;
+	border-bottom: 1px solid #00ff24;
+}
+.cvc{
+	width:40px;
+	outline:none;
+	color:#00ff24;
+	padding:6px;
+	border: none;
+	border-bottom: 1px solid #00ff24;
+	margin-left:1px;
+	transition:all 0.6s;
+	font-family: 'Electrolize', sans-serif;  
+	font-size:16px;
+}
+/*_------------------ PDF ------------------------------------*/
+.input_numbre_pdf{
+border:none;
+padding:5px 12px;
+color:#555;
+background-color:#fff;
+font-size:14px;
+font-weight: normal;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+width:90%;
+}
+
